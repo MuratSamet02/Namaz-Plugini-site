@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DiniSistem — Minecraft sunucuları için namaz, abdest ve cuma eklentisi</title>
+<meta name="description" content="Paper sunucuları için abdest, namaz, cuma cemaati, hutbe, dua, tesbih, gerçek namaz vakitleri ve kıble pusulası eklentisi. Java ve Bedrock oyuncularıyla uyumlu, mod gerektirmez.">
+<meta name="theme-color" content="#04120d">
+<meta name="color-scheme" content="dark">
+<meta property="og:type" content="website">
+<meta property="og:title" content="DiniSistem — Minecraft için namaz ve cemaat eklentisi">
+<meta property="og:description" content="Abdest, namaz, cuma cemaati, hutbe, dua, tesbih, astronomik namaz vakitleri ve kıble pusulası. Tek JAR, sıfır mod.">
+<meta property="og:locale" content="tr_TR">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230a281c'/%3E%3Cpath d='M22 20a7 7 0 1 1-4.6-11.6A6 6 0 0 0 22 20Z' fill='%23e8c877'/%3E%3Ccircle cx='23.5' cy='9.5' r='1.6' fill='%23e8c877'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/css/stil.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "DiniSistem",
+  "applicationCategory": "GameApplication",
+  "operatingSystem": "Minecraft Java Edition · Paper",
+  "description": "Paper sunucuları için abdest, namaz, cuma cemaati, hutbe, dua, tesbih, namaz vakitleri ve kıble pusulası eklentisi.",
+  "softwareVersion": "1.1.0",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "TRY" }
+}
+</script>
+</head>
+<body>
+<a class="atla" href="#icerik">İçeriğe geç</a>
+
+<header class="ust">
+  <div class="kap ust-ic">
+    <a class="marka" href="#">
+      <svg viewBox="0 0 32 32" aria-hidden="true">
+        <path d="M21 24a8 8 0 1 1-5.2-13.2A7 7 0 0 0 21 24Z" fill="currentColor" opacity=".85"/>
+        <circle cx="24.5" cy="8.5" r="1.8" fill="currentColor"/>
+        <path d="M6 27h20" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" opacity=".5"/>
+      </svg>
+      <span>Dini<b>Sistem</b> <small class="surum">1.1</small></span>
+    </a>
+    <button class="menu-dugme" id="menuDugme" aria-expanded="false" aria-controls="menu" aria-label="Menüyü aç">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+        <path d="M4 7h16M4 12h16M4 17h16"/>
+      </svg>
+    </button>
+    <nav class="menu" id="menu" aria-label="Ana menü">
+      <a href="#ozellikler">Özellikler</a>
+      <a href="#yenilikler">Yenilikler</a>
+      <a href="#komutlar">Komutlar</a>
+      <a href="#kurulum">Kurulum</a>
+      <a href="#sss">SSS</a>
+      <a class="dugme dugme-altin dugme-kucuk" href="#indir">İndir</a>
+    </nav>
+  </div>
+</header>
+
+<main id="icerik">
+
+  <!-- ---------------------------------------------------------- HERO -->
+  <section class="hero">
+    <div class="kap hero-ic">
+      <div>
+        <span class="etiket">Paper 26.1.2 · Java &amp; Bedrock</span>
+        <h1>Minecraft sunucunda namaz, abdest ve cemaat — tek JAR ile</h1>
+        <p class="giris">
+          DiniSistem; abdestten Cuma cemaatine, hutbeden tesbihe kadar ibadet akışını oyunun içine taşır.
+          Gerçek güneş hesabıyla namaz vakitleri, Kâbe'ye dönen kıble pusulası ve her duruşa özel
+          animasyonlar — hepsi tek dosyadan ayarlanabilir.
+        </p>
+        <div class="hero-dugmeler">
+          <a class="dugme dugme-altin" href="#indir">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 3v12m0 0 4.5-4.5M12 15l-4.5-4.5M4 19h16"/>
+            </svg>
+            Eklentiyi indir
+          </a>
+          <a class="dugme dugme-cizgi" href="#komutlar">Komutları gör</a>
+        </div>
+        <ul class="rozetler">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m4 12 5 5L20 6"/></svg>Mod gerektirmez</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m4 12 5 5L20 6"/></svg>Geyser / Floodgate uyumlu</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m4 12 5 5L20 6"/></svg>Kendini onaran sistem</li>
+        </ul>
+      </div>
+
+      <div class="terminal" aria-hidden="true">
+        <div class="terminal-bas">
+          <span class="nokta"></span><span class="nokta"></span><span class="nokta"></span>
+          <span class="ad">oyun içi önizleme</span>
+        </div>
+        <div class="terminal-govde" id="terminalGovde"></div>
+        <div class="terminal-alt">
+          <span class="durum">DiniSistem 1.1.0 · aktif</span>
+          <span>canlı demo</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ---------------------------------------------------------- ÖZELLİKLER -->
+  <section class="bolum" id="ozellikler">
+    <div class="kap">
+      <div class="bolum-bas" data-izle>
+        <span class="ust-yazi">Ne yapar?</span>
+        <h2>İbadet akışının tamamı, oyunun dilinde</h2>
+        <p>Her adım sohbet, action bar ve seslerle yürür; oyuncu hiçbir mod kurmaz. Sunucu sahibi ise
+          neredeyse her satırı YAML'dan değiştirir.</p>
+      </div>
+
+      <div class="kartlar">
+        <article class="kart" data-izle>
+          <div class="simge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.7s6.2 6.4 6.2 11a6.2 6.2 0 0 1-12.4 0c0-4.6 6.2-11 6.2-11Z"/></svg></div>
+          <h3>Adım adım abdest</h3>
+          <p>Yedi adım tek tek ekranda okunur. Su şartı, geçerlilik süresi, ölünce veya uyuyunca bozulma
+            ayarlanabilir; abdest sunucu kapansa da saklanır.</p>
+        </article>
+
+        <article class="kart" data-izle>
+          <div class="simge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V9l8-5 8 5v11"/><path d="M9 20v-6h6v6"/></svg></div>
+          <h3>Tam namaz, gerçek duruşlar</h3>
+          <p>Kıyam, rükû, kavme, secde, celse, ka'de ve selam; baş açısı ve duruş birlikte değişir.
+            TAM modda Fâtiha'dan Rabbenâ'ya her satır ayrı ayrı okunur.</p>
+        </article>
+
+        <article class="kart" data-izle>
+          <div class="simge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h12"/><circle cx="19" cy="18" r="2.5"/></svg></div>
+          <h3>Cuma cemaati ve hutbe</h3>
+          <p>Çağrı boss bar ve tıklanabilir butonla duyurulur. Hatip minbere çıkar, cemaat saflara geçer,
+            hutbe satır satır okunur, ardından cemaatle namaz kılınır.</p>
+        </article>
+
+        <article class="kart" data-izle>
+          <span class="yeni">Yeni</span>
+          <div class="simge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 3v9l6 3"/></svg></div>
+          <h3>Gerçek namaz vakitleri</h3>
+          <p><code>/vakit</code> güneşe göre imsak, öğle, ikindi, akşam ve yatsıyı hesaplar. Konum bir kez
+            ayarlanır; vakit girişinde ezan duyurusu açılabilir.</p>
+        </article>
+
+        <article class="kart" data-izle>
+          <span class="yeni">Yeni</span>
+          <div class="simge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m15.5 8.5-2 5-5 2 2-5Z"/></svg></div>
+          <h3>Kâbe'ye dönen pusula</h3>
+          <p><code>/kible</code> baktığın yönü Kâbe yönüyle karşılaştırır: “▲ ileride”, “◀ solda”.
+            Mesafe kilometre olarak yazar; hizalandığında halka efekti belirir.</p>
+        </article>
+
+        <article class="kart" data-izle>
+          <span class="yeni">Yeni</span>
+          <div class="simge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M18.4 5.6l-2.1 2.1M7.7 16.3l-2.1 2.1"/><circle cx="12" cy="12" r="3.2"/></svg></div>
+          <h3>Animasyonlar ve sesler</h3>
+          <p>Her duruşun kendi parçacığı ve sesi var: kıyamda ışık, secdede alev, selamda halka.
+            Parçacık adı, adedi, rengi ve sesi config'ten değiştirilir.</p>
+        </article>
+
+        <article class="kart" data-izle>
+          <div class="simge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V4m0 12 6-4 6 4 4-3"/><path d="M20 4v9"/></svg></div>
+          <h3>Mihrap, minber, saflar</h3>
+          <p>İmamın yeri, kıble yönü ve hatibin minberi komutla belirlenir. <code>/saf</code> aracıyla
+            çizilen saflara cemaat ortadan dışa doğru dolar.</p>
+        </article>
+
+        <article class="kart" data-izle>
+          <div class="simge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 6v6c0 4.4 3.4 8.3 8 9 4.6-.7 8-4.6 8-9V6Z"/><path d="m9 12 2 2 4-4"/></svg></div>
+          <h3>Kendini onarma</h3>
+          <p>Takılan namaz oturumları, sahipsiz saf yerleri ve yarım kalan Cuma çağrısı otomatik toparlanır.
+            Bozuk veri dosyaları silinmez, yedeklenir.</p>
+        </article>
+
+        <article class="kart" data-izle>
+          <div class="simge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16v16H4z"/><path d="M8 8h8M8 12h8M8 16h5"/></svg></div>
+          <h3>Hutbe, dua ve tesbih</h3>
+          <p><code>/hutbe</code> haftanın hutbesini kitap olarak açar. <code>/dua</code> kategorilere ayrılmış
+            dualardan verir. <code>/tesbih</code> araçla, otomatik veya komutla sayar.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ---------------------------------------------------------- YENİLİKLER -->
+  <section class="bolum" id="yenilikler">
+    <div class="kap">
+      <div class="bolum-bas" data-izle>
+        <span class="ust-yazi">1.0.4 → 1.1.0</span>
+        <h2>Bu sürümde gelenler</h2>
+        <p>Vakitler, kıble pusulası ve tamamen ayarlanabilir efekt motoru. Eski config otomatik yedeklenir.</p>
+      </div>
+
+      <div class="surumler" data-izle>
+        <div class="surum-karti">
+          <h3><span class="no">1.1.0</span><span class="tarih">yeni sürüm</span></h3>
+          <ul>
+            <li>Güneşe göre gerçek namaz vakitleri: <code>/vakit</code>, 55 şehir ön ayarı veya elle koordinat.</li>
+            <li>Vakit girişinde ezan duyurusu (başlık, ses, mesaj) ve Cuma'yı gerçek öğle vaktine bağlama.</li>
+            <li>Canlı kıble pusulası: <code>/kible</code> sapma yönü, derece ve Kâbe'ye mesafe.</li>
+            <li>Ayrı efekt motoru: her duruşa parçacık, halka animasyonu ve kendi sesi.</li>
+            <li>Tek tek ayarlanabilir parçacık türü, adedi, yayılımı, hızı ve yüksekliği.</li>
+            <li>Efekt/ses menzili: kalabalık sunucularda gereksiz paket gönderilmez.</li>
+            <li>Hatalı parçacık veya ses adı sunucuyu düşürmez; konsola tek satır uyarı yazılır.</li>
+            <li>Hutbe sıralaması düzeltildi: artık ilk hutbe de sıraya giriyor.</li>
+            <li>Abdest, tesbih ve Cuma çağrısı da efekt/ses sistemine bağlandı.</li>
+          </ul>
+        </div>
+        <div class="surum-karti">
+          <h3><span class="no">1.0.4</span><span class="tarih">kararlı sürüm</span></h3>
+          <ul>
+            <li>Abdest, namaz, cuma cemaati, hutbe, dua ve tesbih.</li>
+            <li>Mihrap, minber ve cami alanı; <code>/saf</code> aracıyla saf çizimi.</li>
+            <li>Kendini onarma, tanı ve debug komutları.</li>
+            <li>Özel günler, istatistik ve spam korumalı ödül sistemi.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ---------------------------------------------------------- KOMUTLAR -->
+  <section class="bolum" id="komutlar">
+    <div class="kap">
+      <div class="bolum-bas" data-izle>
+        <span class="ust-yazi">Başvuru</span>
+        <h2>Komutlar ve yetkiler</h2>
+        <p>Ara veya kategoriye göre süz. Tüm komutlar <code>/dini</code> altında konsoldan da çalışır.</p>
+      </div>
+
+      <div class="komut-arac" data-izle>
+        <div class="arama">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+            <circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/>
+          </svg>
+          <label class="gorunmez" for="komutAra">Komut ara</label>
+          <input id="komutAra" type="search" placeholder="Komut veya açıklama ara… (ör. namaz, kıble)" autocomplete="off">
+        </div>
+        <div class="filtreler" role="group" aria-label="Kategori">
+          <button class="filtre" data-kategori="hepsi" aria-pressed="true">Hepsi</button>
+          <button class="filtre" data-kategori="oyuncu" aria-pressed="false">Oyuncu</button>
+          <button class="filtre" data-kategori="yonetim" aria-pressed="false">Yönetici</button>
+          <button class="filtre" data-kategori="yeni" aria-pressed="false">1.1 yenilikleri</button>
+        </div>
+      </div>
+
+      <div class="tablo-sar" data-izle>
+        <table class="komutlar">
+          <caption id="komutSayaci">Tüm komutlar gösteriliyor</caption>
+          <thead>
+            <tr>
+              <th scope="col">Komut</th>
+              <th scope="col">Açıklama</th>
+              <th scope="col">Yetki</th>
+            </tr>
+          </thead>
+          <tbody id="komutGovde"><!-- JS doldurur; JS kapalıysa <noscript> listesi görünür --></tbody>
+        </table>
+        <div class="bos-sonuc" id="bosSonuc" role="status">Aramanla eşleşen komut bulunamadı.</div>
+        <noscript>
+          <div style="padding:1rem">
+            <p><code>/abdest</code> · <code>/namaz [tam|kisa|iptal]</code> · <code>/cuma [iptal]</code> ·
+              <code>/hutbe [ad]</code> · <code>/dua [kategori|liste]</code> ·
+              <code>/tesbih [arac|otomatik|dur|sifirla]</code> · <code>/vakit</code> · <code>/kible</code> ·
+              <code>/cumabildirim</code> · <code>/namazistatistik</code> · <code>/saf …</code> ·
+              <code>/dini …</code></p>
+            <p>Yetkiler: <span class="yetki">dini.kullan</span>, <span class="yetki">dini.abdest</span>,
+              <span class="yetki">dini.namaz</span>, <span class="yetki">dini.cuma</span>,
+              <span class="yetki">dini.admin</span>, <span class="yetki">dini.imam</span></p>
+          </div>
+        </noscript>
+      </div>
+    </div>
+  </section>
+
+  <!-- ---------------------------------------------------------- KURULUM -->
+  <section class="bolum" id="kurulum">
+    <div class="kap">
+      <div class="bolum-bas" data-izle>
+        <span class="ust-yazi">5 dakikada</span>
+        <h2>Kurulum</h2>
+        <p>Paper sunucun, JDK 25 ve internet erişimi yeterli. Cami kurulumu tamamen oyun içinden yapılır.</p>
+      </div>
+
+      <div class="adimlar" data-izle>
+        <div class="adim">
+          <div>
+            <h3>JAR'ı yükle</h3>
+            <p>İndirdiğin dosyayı sunucunun <code>plugins/</code> klasörüne at ve sunucuyu yeniden başlat.</p>
+            <div class="kod-liste"><span>plugins/DiniSistem-1.1.0.jar</span></div>
+          </div>
+        </div>
+        <div class="adim">
+          <div>
+            <h3>Konumu ayarla</h3>
+            <p>Oyun içinde durduğun yer için şehir seç veya koordinat gir. Kıble pusulasıyla yönü doğrula.</p>
+            <div class="kod-liste"><span>/vakit konum istanbul</span><span>/vakit konum 41.01 28.98</span><span>/kible</span></div>
+          </div>
+        </div>
+        <div class="adim">
+          <div>
+            <h3>Camiyi yerleştir</h3>
+            <p>Cami içinde, imamın duracağı yerde kıbleye bakarak mihrabı; hutbe yerinde minberi belirle.</p>
+            <div class="kod-liste"><span>/dini mihrap</span><span>/dini minber</span><span>/dini alanbelirle 20</span><span>/dini onizleme</span></div>
+          </div>
+        </div>
+        <div class="adim">
+          <div>
+            <h3>Safları çiz (isteğe bağlı)</h3>
+            <p>Saf aracıyla iki nokta seç, numarayla saf kur. Çizmezsen imamın arkasında otomatik saf kurulur.</p>
+            <div class="kod-liste"><span>/saf arac</span><span>/saf olustur 1 8</span><span>/saf liste</span></div>
+          </div>
+        </div>
+        <div class="adim">
+          <div>
+            <h3>Denetle ve aç</h3>
+            <p>Kontrol komutu eksikleri söyler. Artık <code>/abdest</code> ve <code>/namaz</code> hazır.</p>
+            <div class="kod-liste"><span>/dini kontrol</span><span>/dini ayar vakitler.ezan.aktif true</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ---------------------------------------------------------- SSS -->
+  <section class="bolum" id="sss">
+    <div class="kap">
+      <div class="bolum-bas" data-izle>
+        <span class="ust-yazi">Merak edilenler</span>
+        <h2>Sık sorulan sorular</h2>
+      </div>
+
+      <div class="sss" data-izle>
+        <details class="soru">
+          <summary>Bedrock oyuncuları kullanabilir mi?</summary>
+          <div class="cevap"><p>Evet. Eklenti yalnızca komut, sohbet, action bar ve başlık kullanır; istemciye mod
+            kurulmaz. Geyser/Floodgate üzerinden gelen oyuncular da aynı komutları yazar. Saf aracı yerine
+            <code>/saf nokta 1</code> ve <code>/saf nokta 2</code> komutları vardır.</p></div>
+        </details>
+        <details class="soru">
+          <summary>Vakitler Diyanet takvimiyle aynı mı?</summary>
+          <div class="cevap"><p>Hesap NOAA'nın güneş formüllerini ve Diyanet'in açılarını (imsak 18°, yatsı 17°,
+            ikindi gölge 1) kullanır; tipik fark ±2 dakikadır. Fark görürsen
+            <code>/dini ayar vakitler.ayar.imsak 1</code> gibi dakika kaydırması yapabilirsin. Hanefi ikindi
+            hesabı için <code>vakitler.ikindi-golge</code> değerini <code>2</code> yap.</p></div>
+        </details>
+        <details class="soru">
+          <summary>Animasyonlar sunucuyu yorar mı?</summary>
+          <div class="cevap"><p>Parçacıklar yalnızca <code>efekt.menzil</code> (varsayılan 32 blok) içindeki
+            oyunculara gönderilir ve tek kareliktir. Kalabalık sunucuda <code>efekt.sayi</code> değerini küçültmek
+            veya <code>/dini ayar efekt.aktif false</code> demek yeterlidir.</p></div>
+        </details>
+        <details class="soru">
+          <summary>Kendi parçacığımı veya sesimi ekleyebilir miyim?</summary>
+          <div class="cevap"><p>Evet. <code>config.yml</code> içindeki her efekt bloğunda <code>parcacik</code>
+            satırına istediğin Minecraft parçacığını yazabilirsin (hem <code>END_ROD</code> hem
+            <code>end_rod</code> yazımı geçerlidir). Seslerde <code>tur</code> alanı aynı şekilde çalışır.
+            Tanınmayan bir ad yazarsan eklenti o efekti atlar ve konsola bir kez uyarı yazar; hata vermez.</p></div>
+        </details>
+        <details class="soru">
+          <summary>Güncelleme yapınca ayarlarım silinir mi?</summary>
+          <div class="cevap"><p>Hayır. Config sürümü eskise bile eski dosya
+            <code>config.yml.eski-&lt;zaman&gt;</code> adıyla yedeklenir ve yerler, kıble, ödül ile temel
+            ayarlar yeni dosyaya taşınır.</p></div>
+        </details>
+        <details class="soru">
+          <summary>Sunucum 1.21 sürümünde çalışıyor, olur mu?</summary>
+          <div class="cevap"><p>Eklenti <code>api-version: '26.1.2'</code> ile derlenir. Paper 26.1 ve üzeri
+            hedeflenir; daha eski sürümlerde Paper'ın API uyumluluğuna bağlıdır. Kararlı sonuç için
+            <code>README</code>'deki sürüm notlarına bak.</p></div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ---------------------------------------------------------- İNDİR -->
+  <section id="indir">
+    <div class="kap">
+      <div class="cta" data-izle>
+        <span class="etiket">Hazır</span>
+        <h2>Sunucuna bir cami, cemaatine bir düzen</h2>
+        <p>Tek JAR, sıfır istemci modu. Kur, mihrabı göster, cemaati çağır.</p>
+        <div class="hero-dugmeler">
+          <a class="dugme dugme-altin" href="indir/DiniSistem-1.1.0.jar" id="indirmeBaglantisi" download>
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 3v12m0 0 4.5-4.5M12 15l-4.5-4.5M4 19h16"/>
+            </svg>
+            DiniSistem-1.1.0.jar
+          </a>
+          <a class="dugme dugme-cizgi" href="#kurulum">Kurulum rehberi</a>
+        </div>
+        <dl class="indirme-kutu">
+          <div><dt>Sürüm</dt><dd>1.1.0</dd></div>
+          <div><dt>Platform</dt><dd>Paper 26.1.2+</dd></div>
+          <div><dt>Java</dt><dd>25</dd></div>
+          <div><dt>Lisans</dt><dd>Ücretsiz</dd></div>
+        </dl>
+        <p class="alt-not">Derleme çıktısı: <code>build/libs/DiniSistem-1.1.0.jar</code> — GitHub Actions ile otomatik üretilir.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="alt">
+  <div class="kap alt-ic">
+    <div>
+      <a class="marka" href="#">
+        <svg viewBox="0 0 32 32" aria-hidden="true">
+          <path d="M21 24a8 8 0 1 1-5.2-13.2A7 7 0 0 0 21 24Z" fill="currentColor" opacity=".85"/>
+          <circle cx="24.5" cy="8.5" r="1.8" fill="currentColor"/>
+          <path d="M6 27h20" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" opacity=".5"/>
+        </svg>
+        <span>Dini<b>Sistem</b></span>
+      </a>
+      <p>Paper sunucuları için abdest, namaz, cemaat, hutbe, dua ve tesbih eklentisi. Hazır dini metinleri
+        yayınlamadan önce bilen birine kontrol ettirmeyi unutma.</p>
+    </div>
+    <nav class="alt-baglar" aria-label="Alt menü">
+      <a href="#ozellikler">Özellikler</a>
+      <a href="#komutlar">Komutlar</a>
+      <a href="#kurulum">Kurulum</a>
+      <a href="#sss">SSS</a>
+      <a href="#indir">İndir</a>
+    </nav>
+  </div>
+</footer>
+
+<button class="uste-don" id="usteDon" aria-label="Sayfanın başına dön">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <path d="M12 19V5m0 0 6 6m-6-6-6 6"/>
+  </svg>
+</button>
+
+<script src="assets/js/site.js" defer></script>
+</body>
+</html>
